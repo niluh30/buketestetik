@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pink Rose Bouquet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inknut Antiqua', serif;
+    background: linear-gradient(120deg, #fce9ee, #fff5f2);
+    color: #89566a;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* DEKORASI */
+body::before {
+    content: "♡";
+    position: fixed;
+    top: 30px;
+    left: 5%;
+    color: #f4cfdb;
+    font-size: 30px;
+}
+
+body::after {
+    content: "✿";
+    position: fixed;
+    bottom: 25px;
+    right: 8%;
+    color: #eac1d0;
+    font-size: 30px;
+}
+
+/* NAVIGASI */
+nav {
+    padding: 15px 8%;
+}
+
+nav a {
+    color: #bd7189;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* BAGIAN UTAMA */
+.detail {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    padding: 25px 8%;
+}
+
+/* GALERI */
+.gallery {
+    width: 420px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slider {
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #dca5b566;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 100%;
+    min-width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+/* TOMBOL PANAH */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: #d78da4;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+/* TITIK */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #eac0ce;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #bd7189;
+    transform: scale(1.3);
+}
+
+/* TEKS */
+.description {
+    max-width: 420px;
+}
+
+.description h1 {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #bd657f;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.description p {
+    font-size: 12px;
+    line-height: 2;
+    text-align: justify;
+    color: #795967;
+}
+
+/* TOMBOL */
+.back {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 28px;
+    border: 1px solid #33212a;
+    background: #d78da4;
+    color: white;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #bd657f;
+    transform: translateY(-3px);
+}
+
+/* HP */
+@media(max-width: 800px) {
+    .detail {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 20px;
+    }
+
+    .gallery {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .slides img {
+        height: 350px;
+    }
+
+    .description {
+        max-width: 420px;
+    }
+
+    .description h1 {
+        font-size: 21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">♡ Back to Home</a>
+</nav>
+
+<section class="detail">
+
+    <!-- FOTO BUKET -->
+    <div class="gallery">
+
+        <div class="slider">
+            <div class="slides" id="slides">
+
+                <img src="img/buket2.jpg" alt="Buket Pink">
+                <img src="img/buketpink.jpg" alt="Sweet Pink">
+                <img src="img/buketmawar.jpg" alt="Lovely Roses">
+                <img src="img/buketpastel.jpg" alt="Pastel Bouquet">
+                <img src="img/buketcantik.jpg" alt="Beautiful Bouquet">
+
+            </div>
+        </div>
+
+        <button class="arrow prev" onclick="geser(-1)">❮</button>
+        <button class="arrow next" onclick="geser(1)">❯</button>
+
+        <div class="dots" id="dots"></div>
+
+    </div>
+
+    <!-- DESKRIPSI -->
+    <div class="description">
+
+        <h1>
+            pink rose flower bouquet
+            <br>
+            a lovely expression of love
+        </h1>
+
+        <p>
+            Buket bunga mawar pink yang dirangkai
+            dengan cantik bersama bunga baby's breath
+            putih. Perpaduan warna pink pastel memberikan
+            kesan feminin, romantis, dan elegan.
+            Keindahan setiap bunga melambangkan kasih
+            sayang, ketulusan, dan kebahagiaan.
+            Sangat cocok diberikan sebagai hadiah
+            istimewa untuk orang tersayang.
+        </p>
+
+        <a href="index.html" class="back">
+            Back to Home ♡
+        </a>
+
+    </div>
+
+</section>
+
+<script>
+const slides = document.getElementById("slides");
+const gambar = slides.querySelectorAll("img");
+const dots = document.getElementById("dots");
+
+let posisi = 0;
+
+gambar.forEach((img, index) => {
+    const dot = document.createElement("span");
+
+    dot.className = "dot";
+
+    dot.onclick = function() {
+        posisi = index;
+        tampilkan();
+    };
+
+    dots.appendChild(dot);
+});
+
+function tampilkan() {
+    slides.style.transform =
+        `translateX(-${posisi * 100}%)`;
+
+    document.querySelectorAll(".dot").forEach(
+        (dot, index) => {
+            dot.classList.toggle(
+                "active",
+                index === posisi
+            );
+        }
+    );
+}
+
+function geser(arah) {
+    posisi = (posisi + arah + gambar.length)
+        % gambar.length;
+
+    tampilkan();
+}
+
+tampilkan();
+</script>
+
+</body>
+</html>

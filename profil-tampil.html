@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Tersimpan - Niuhh ♡</title>
+
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inknut Antiqua', serif;
+            background: linear-gradient(
+                135deg,
+                #fff0f4,
+                #ffe4ec,
+                #fff8f5,
+                #fce4ec
+            );
+            color: #a65f7b;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: static !important;
+            padding: 20px;
+            background: rgba(255,255,255,0.65);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d18fa6;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: #e7a8bd;
+        }
+
+        .profile-section {
+            min-height: 85vh;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .judul {
+            text-align: center;
+            font-size: clamp(30px, 5vw, 48px);
+            color: #c47396;
+            margin-bottom: 15px;
+        }
+
+        .deskripsi {
+            text-align: center;
+            color: #c5849d;
+            margin-bottom: 45px;
+            font-size: 14px;
+        }
+
+        .hiasan {
+            text-align: center;
+            color: #d18fa5;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .profile-card {
+            max-width: 750px;
+            margin: auto;
+            padding: 45px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.78);
+            border: 1px solid white;
+            box-shadow: 0 15px 40px rgba(190,110,140,0.15);
+            backdrop-filter: blur(12px);
+            animation: muncul 0.8s ease;
+        }
+
+        .profile-card h2 {
+            text-align: center;
+            color: #bd718e;
+            margin-bottom: 35px;
+            font-size: 25px;
+        }
+
+        .profile-item {
+            display: grid;
+            grid-template-columns: 35px 150px 15px 1fr;
+            gap: 10px;
+            align-items: start;
+            margin-bottom: 23px;
+            color: #87576a;
+            font-size: 14px;
+        }
+
+        .profile-item .bunga {
+            color: #dc91ad;
+            font-size: 19px;
+        }
+
+        .profile-item strong {
+            color: #a65f7b;
+        }
+
+        .profile-item span:last-child {
+            overflow-wrap: anywhere;
+        }
+
+        .tombol {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 15px 35px;
+            border-radius: 35px;
+            background: linear-gradient(
+                135deg,
+                #d98eaa,
+                #c47e9e
+            );
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 13px;
+        }
+
+        .tombol:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(190,110,140,0.25);
+        }
+
+        .kosong {
+            text-align: center;
+            line-height: 2;
+            color: #ad7890;
+        }
+
+        .dekorasi {
+            position: fixed;
+            pointer-events: none;
+            color: #e9b1c6;
+            opacity: 0.5;
+            font-size: 40px;
+        }
+
+        .bunga-1 {
+            top: 20%;
+            left: 5%;
+        }
+
+        .bunga-2 {
+            right: 7%;
+            bottom: 20%;
+        }
+
+        footer {
+            padding: 45px 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.55);
+            color: #b96885;
+        }
+
+        footer h2 {
+            font-size: 22px;
+            font-style: italic;
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .profile-card {
+                padding: 25px 18px;
+            }
+
+            .profile-item {
+                grid-template-columns: 25px 95px 10px 1fr;
+                font-size: 11px;
+                gap: 5px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .profile-section {
+                padding: 50px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dekorasi bunga-1">✿</div>
+    <div class="dekorasi bunga-2">♡</div>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li>
+                <a href="https://www.instagram.com/iilluhhh_/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- PROFIL TERSIMPAN -->
+    <section class="profile-section">
+
+        <div class="container">
+
+            <h1 class="judul">Profil Tersimpan ♡</h1>
+
+            <p class="deskripsi">
+                Berikut hasil input data yang baru saja kamu simpan ✿
+            </p>
+
+            <div class="hiasan">
+                ────── ✿ ──────
+            </div>
+
+            <div class="profile-card">
+
+                <h2>♡ My Profile ♡</h2>
+
+                <div id="profilResult">
+
+                    <p class="kosong">
+                        Data belum tersedia. <br>
+                        Silakan isi formulir terlebih dahulu ✿
+                    </p>
+
+                </div>
+
+                <a href="profil.html" class="tombol">
+                    ← Kembali ke Form ♡
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Any Questions? <br>
+            Find Me Here ♡
+        </h2>
+
+        <p>Instagram: @iilluhhh_</p>
+
+        <p>Designed & Developed by Niuhh♡</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const dataProfil = localStorage.getItem("profilNiuhh");
+
+        const tempatProfil = document.getElementById("profilResult");
+
+        if (dataProfil) {
+
+            try {
+
+                const profil = JSON.parse(dataProfil);
+
+                const data = [
+                    ["NIM", profil.nim],
+                    ["Nama", profil.nama],
+                    ["Alamat", profil.alamat],
+                    ["Hobi", profil.hobi],
+                    ["Instagram", profil.instagram]
+                ];
+
+                tempatProfil.innerHTML = "";
+
+                data.forEach(function(item) {
+
+                    const baris = document.createElement("div");
+                    baris.className = "profile-item";
+
+                    const bunga = document.createElement("span");
+                    bunga.className = "bunga";
+                    bunga.textContent = "✿";
+
+                    const label = document.createElement("strong");
+                    label.textContent = item[0];
+
+                    const titik = document.createElement("span");
+                    titik.textContent = ":";
+
+                    const nilai = document.createElement("span");
+                    nilai.textContent = item[1] || "Belum diisi";
+
+                    baris.append(bunga, label, titik, nilai);
+
+                    tempatProfil.appendChild(baris);
+
+                });
+
+            } catch (error) {
+
+                tempatProfil.textContent =
+                    "Data profil tidak dapat dibaca.";
+
+                console.error(error);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

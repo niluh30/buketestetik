@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Profil</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            padding: 50px 20px;
+            background: linear-gradient(
+                135deg,
+                #e9a4bb,
+                #daa9bc,
+                #e0a0b7
+            );
+            color: #573d50;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .judul {
+            font-family: Georgia, serif;
+            font-size: clamp(42px, 7vw, 70px);
+            color: #57364e;
+            margin-bottom: 15px;
+            animation: muncul 1s ease;
+        }
+
+        .deskripsi {
+            color: #806779;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .profil-card {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 35px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 15px 40px rgba(137, 75, 112, 0.15);
+            backdrop-filter: blur(12px);
+            animation: naik 0.8s ease;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #714c68;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #e5bfd4;
+            border-radius: 12px;
+            background: #fffafd;
+            color: #573d50;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #d77eaa;
+            box-shadow: 0 0 0 4px rgba(215, 126, 170, 0.15);
+            transform: translateY(-2px);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #b99cac;
+        }
+
+        .btn-simpan {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #d98eb5, #b97cc4);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(185, 124, 196, 0.25);
+        }
+
+        .btn-simpan:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(185, 124, 196, 0.4);
+        }
+
+        .btn-simpan:active {
+            transform: scale(0.98);
+        }
+
+        .hasil {
+            display: none;
+            margin-top: 25px;
+            padding: 25px;
+            background: #fff4fa;
+            border: 1px solid #f0c9df;
+            border-radius: 18px;
+            animation: muncul 0.5s ease;
+        }
+
+        .hasil h2 {
+            margin-bottom: 18px;
+            color: #a65383;
+            font-family: Georgia, serif;
+        }
+
+        .hasil p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .hasil strong {
+            color: #8d5277;
+        }
+
+        .dekorasi {
+            position: fixed;
+            font-size: 25px;
+            opacity: 0.4;
+            pointer-events: none;
+            animation: melayang 5s ease-in-out infinite;
+        }
+
+        .bunga-1 {
+            top: 10%;
+            right: 8%;
+        }
+
+        .bunga-2 {
+            bottom: 12%;
+            right: 12%;
+            animation-delay: 1s;
+        }
+
+        .bunga-3 {
+            top: 55%;
+            left: 4%;
+            animation-delay: 2s;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes naik {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes melayang {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-18px) rotate(12deg);
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            .profil-card {
+                padding: 22px;
+            }
+
+            .deskripsi {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dekorasi bunga-1">✿</div>
+    <div class="dekorasi bunga-2">♡</div>
+    <div class="dekorasi bunga-3">✧</div>
+    <div class="dekorasi bunga-3">୨୧</div>
+    <div class="dekorasi bunga-3">♡</div>
+    <div class="dekorasi bunga-3">🌷</div>
+    <main class="container">
+
+        <h1 class="judul">Form Profil 🌷</h1>
+
+        <p class="deskripsi">
+            Isi data diri anda di bawah ini, lalu tekan tombol
+            simpan untuk melihat hasil profil kamu.
+        </p>
+
+        <section class="profil-card">
+
+            <form id="formProfil">
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input
+                        type="text"
+                        id="nim"
+                        placeholder="Masukkan NIM"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama lengkap"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea
+                        id="alamat"
+                        placeholder="Masukkan alamat kamu"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hobi">Hobi</label>
+                    <input
+                        type="text"
+                        id="hobi"
+                        placeholder="Contoh: Healing, Shoping, jajan"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="instagram">Instagram</label>
+                    <input
+                        type="text"
+                        id="instagram"
+                        placeholder="@username"
+                    >
+                </div>
+
+                <button type="submit" class="btn-simpan">
+                    🌸 Simpan Profil
+                </button>
+
+            </form>
+
+            <div class="hasil" id="hasilProfil">
+                <h2>♡ Profil Kamu</h2>
+
+                <p><strong>NIM:</strong> <span id="hasilNim"></span></p>
+                <p><strong>Nama:</strong> <span id="hasilNama"></span></p>
+                <p><strong>Alamat:</strong> <span id="hasilAlamat"></span></p>
+                <p><strong>Hobi:</strong> <span id="hasilHobi"></span></p>
+                <p><strong>Instagram:</strong> <span id="hasilInstagram"></span></p>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById("formProfil");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            document.getElementById("hasilNim").textContent =
+                document.getElementById("nim").value;
+
+            document.getElementById("hasilNama").textContent =
+                document.getElementById("nama").value;
+
+            document.getElementById("hasilAlamat").textContent =
+                document.getElementById("alamat").value;
+
+            document.getElementById("hasilHobi").textContent =
+                document.getElementById("hobi").value;
+
+            document.getElementById("hasilInstagram").textContent =
+                document.getElementById("instagram").value || "Belum diisi";
+
+            document.getElementById("hasilProfil").style.display = "block";
+
+            document.getElementById("hasilProfil").scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+        });
+    </script>
+
+</body>
+</html>
+	</body>
+	</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Branding Strategy for Female Cosmetics</title>
+	<link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css">
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<style>
+		.project-container {
+			background-color: white;
+			max-width: 1200px;
+			margin: 0 auto;
+			box-shadow: 0 0 30px rgba(0,0,0,0.1);
+		}
+		.full-width-image {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.breadcrumb {
+			padding: 20px;
+			background-color: #f8f9fa;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 14px;
+		}
+		.breadcrumb a {
+			color: black;
+			text-decoration: none;
+		}
+		.breadcrumb a:hover {
+			text-decoration: underline;
+		}
+		.project-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 50pt;
+			transform: translate(-50%, -50%);
+			color: white;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+		.image-container {
+			position: relative;
+		}
+		
+		/* Slider Styles */
+		.project-slider {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: flex;
+			transition: transform 0.5s ease;
+			width: 300%;
+		}
+		.slider-slide {
+			width: 33.33%;
+			flex-shrink: 0;
+		}
+		.slider-slide img {
+			width: 100%;
+			height: 500px;
+			object-fit: cover;
+		}
+		.slider-controls {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+		}
+		.slider-dot {
+			width: 10px;
+			height: 10px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.slider-dot.active {
+			background-color: white;
+		}
+		
+		/* Slider Checkbox Hack */
+		.slider-toggle {
+			display: none;
+		}
+		#slide1:checked ~ .slider-container {
+			transform: translateX(0);
+		}
+		#slide2:checked ~ .slider-container {
+			transform: translateX(-33.33%);
+		}
+		#slide3:checked ~ .slider-container {
+			transform: translateX(-66.66%);
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html#contact">contact</a></li>
+			<li>works</li>
+			<li>expertience</li>
+			<li class="empty"></li>
+			<li><a href="index.html">profil/a></li>
+			<li><a href="https://www.instagram.com/iilluhhh_?mdxt=MW9kNjRtcjVvejBqdQ%3D%3D&utm_source=qr" target="_blank">twitter</a></li>
+			<li>linkedin</li>
+		</ul>
+	</nav>
+
+	<div class="project-container">
+		<div class="image-container">
+			<img src="img/buket2.jpg" class="full-width-image" alt="Flowers Buket">
+			<h1 class="project-title">Branding Strategy<br>for Female Cosmetics</h1>
+		</div>
+		<div class="breadcrumb">
+			<a href="../index.html">Home</a> / Branding Strategy for Female Cosmetics
+		</div>
+		<section class="project" style="padding-top: 50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Overview</h2>
+						<p>Strategi merek untuk Luxe Beauty Innovations adalah pendekatan komprehensif untuk memposisikan ulang lini kosmetik wanita mereka di pasar yang sangat kompetitif. Sasaran kami adalah menciptakan identitas merek unik yang selaras dengan wanita modern dan berdaya yang mencari kecanggihan dan keaslian dalam produk kecantikan mereka.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Research & Discovery</h2>
+						<p>Conducted in-depth market research involving:</p>
+						<ul>
+							<li>Wawancara pengguna dengan 250+ peserta demografi target</li>
+							<li>Analisis persaingan komprehensif dari 10 merek kecantikan teratas</li>
+							<li>Pemetaan tren preferensi konsumen kecantikan dan kesehatan yang sedang berkembang</li>
+							<li>Profil psikologis segmen konsumen target</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Brand Identity Development</h2>
+						<p>Menciptakan identitas merek holistik yang berfokus pada:</p>
+						<ul>
+							<li>Bahasa visual minimalis namun elegan</li>
+							<li>Palet warna yang terinspirasi oleh warna mineral alami</li>
+							<li>Tipografi yang mengomunikasikan kekuatan dan kewanitaan</li>
+							<li>Desain kemasan berkelanjutan dengan bahan ramah lingkungan</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project blue">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Key Outcomes</h2>
+						<p>Strategi rebranding menghasilkan:</p>
+						<ul>
+							<li>Peningkatan pengenalan merek sebesar 35%</li>
+							<li>Peningkatan keterlibatan media sosial sebesar 42%</li>
+							<li>Peningkatan penjualan lini produk sebesar 25% pada kuartal pertama</li>
+							<li>Dianugerahi 'Most Innovative Beauty Branding' oleh Design Excellence Awards</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="project">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<h2>Project Gallery</h2>
+						<div class="project-slider">
+							<input type="radio" name="slider" id="slide1" class="slider-toggle" checked>
+							<input type="radio" name="slider" id="slide2" class="slider-toggle">
+							<input type="radio" name="slider" id="slide3" class="slider-toggle">
+							
+							<div class="slider-container">
+								<div class="slider-slide">
+									<img src="img/buket3.jpg" alt="Dashboard App">
+								</div>
+								<div class="slider-slide">
+									<img src="img/buket2.jpg" alt="Cosmetics Project">
+								</div>
+								<div class="slider-slide">
+									<img src="img/buket.jpg" alt="iPad App">
+								</div>
+							</div>
+							
+							<div class="slider-controls">
+								<label for="slide1" class="slider-dot"></label>
+								<label for="slide2" class="slider-dot"></label>
+								<label for="slide3" class="slider-dot"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer id="contact">
+		<h2>Interested in<br>
+			learning more?<br>niluhhsulva@gmail.com</h2>
+			<p>designed & developed by Niluhh Syantik</p>
+		</footer>
+	</body>
+	</html>
